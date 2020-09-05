@@ -15,12 +15,12 @@
 *			
 *			public char[][] getCopy() returns char[][] map
 *			by value. Use this when you want to view the board.
-	@Note:
-		There are no protections from OutOfBounds. Please
-		implement protections on your own code when using 
-		Board.java.
-		
-		Thank you.
+*	@Note:
+*		There are no protections from OutOfBounds. Please
+*		implement protections on your own code when using 
+*		Board.java.
+*		
+*		Thank you.
 *
 *	@Date_Crated:					09-05-2020
 */
