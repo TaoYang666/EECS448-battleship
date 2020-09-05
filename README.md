@@ -4,7 +4,3 @@
 ### hi
 
 ### hi from Samuel G
-
-*hi from sean*
-
-### Jacob says hello as well
