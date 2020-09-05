@@ -22,7 +22,7 @@
 *		
 *		Thank you.
 *
-*	@Date_Crated:					09-05-2020
+*	@Date_Created:					09-05-2020
 */
 public class Board{
 	/*
