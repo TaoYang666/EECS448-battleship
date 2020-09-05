@@ -1,3 +1,3 @@
 # EECS448-battleship
+448 Project 1
 
-## Hey what's up
