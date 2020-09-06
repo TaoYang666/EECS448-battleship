@@ -7,26 +7,26 @@
 *		It allows to fill in the board with char board_marker
 *		and allows to add to board, get from board, and get the
 *		dimensions of the board.
-*		
+*
 *		It has two copy functions,
 *			public char[][] getBoard() returns char[][] map
 *			by referrence. Use this when you want to alter
 *			the board.
-*			
+*
 *			public char[][] getCopy() returns char[][] map
 *			by value. Use this when you want to view the board.
 *	@Note:
 *		There are no protections from OutOfBounds. Please
-*		implement protections on your own code when using 
+*		implement protections on your own code when using
 *		Board.java.
-*		
+*
 *		Thank you.
 *
 *	@Date_Created:					09-05-2020
 */
 public class Board{
 	/*
-		char[][] map is the 2D array 
+		char[][] map is the 2D array
 		that will be used to hold the map
 	*/
 	char[][] map;
@@ -65,12 +65,12 @@ public class Board{
 
 		/*
 			create the map
-			fill in with placeholder 
+			fill in with placeholder
 			char board_marker
 		*/
 		this.map = new char[this.ySize][this.xSize];
-		for(int i = 0; i < ySize; i++){
-			for(int k = 0; k < xSize; k++){
+		for(int i = 0; i < this.ySize; i++){
+			for(int k = 0; k < this.xSize; k++){
 				this.map[k][i] = this.board_marker;
 			}
 		}
@@ -92,8 +92,8 @@ public class Board{
 	*/
 	public char[][] getCopyMap(){
 		char[][] copy = new char[this.ySize][this.xSize];
-		for(int i = 0; i < ySize; i++){
-			for(int k = 0; k < xSize; k++){
+		for(int i = 0; i < this.ySize; i++){
+			for(int k = 0; k < this.xSize; k++){
 				copy[k][i] = this.map[k][i];
 			}
 		}
@@ -123,7 +123,7 @@ public class Board{
 	public int getXSize(){
 		return this.xSize;
 	}
-	
+
 	/**
 	*	@pre:	 must been constructed
 	*	@post:	 returns the y-axis dimension
@@ -147,7 +147,7 @@ public class Board{
 	*	@pre:	 must been constructed
 	*	@post:	 gets char marker from char[y][x] map
 	*	@return: char
-	*/	
+	*/
 	public char getMarker(int x, int y){
 		return this.map[y][x];
 	}
