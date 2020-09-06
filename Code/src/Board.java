@@ -71,7 +71,7 @@ public class Board{
 		this.map = new char[this.ySize][this.xSize];
 		for(int i = 0; i < this.ySize; i++){
 			for(int k = 0; k < this.xSize; k++){
-				this.map[k][i] = this.board_marker;
+				this.map[i][k] = this.board_marker;
 			}
 		}
 	}
@@ -94,7 +94,7 @@ public class Board{
 		char[][] copy = new char[this.ySize][this.xSize];
 		for(int i = 0; i < this.ySize; i++){
 			for(int k = 0; k < this.xSize; k++){
-				copy[k][i] = this.map[k][i];
+				copy[i][k] = this.map[i][k];
 			}
 		}
 		return copy;
@@ -108,7 +108,7 @@ public class Board{
 		Board copy = new Board(this.xSize, this.ySize, this.board_marker);
 		for(int i = 0; i < this.ySize; i++){
 			for(int k = 0; k < this.xSize; k++){
-				copy.addMarker(this.map[k][i], i, k);
+				copy.addMarker(this.map[i][k], i, k);
 			}
 		}
 		return copy;
