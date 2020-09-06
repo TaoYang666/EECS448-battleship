@@ -90,11 +90,25 @@ public class Board{
 	*	@post:	 pass by val of char[][] map
 	*	@return: char[][]
 	*/
-	public char[][] getCopy(){
+	public char[][] getCopyMap(){
 		char[][] copy = new char[this.ySize][this.xSize];
 		for(int i = 0; i < ySize; i++){
 			for(int k = 0; k < xSize; k++){
 				copy[k][i] = this.map[k][i];
+			}
+		}
+		return copy;
+	}
+	/**
+	*	@pre:	must be constructed
+	*	@post: pass by val of Board copy
+	*	@return: Board
+	*/
+	public Board getCopyBoard(){
+		Board copy = new Board(this.xSize, this.ySize, this.board_marker);
+		for(int i = 0; i < this.ySize; i++){
+			for(int k = 0; k < this.xSize; k++){
+				copy.addMarker(this.map[k][i], i, k);
 			}
 		}
 		return copy;
