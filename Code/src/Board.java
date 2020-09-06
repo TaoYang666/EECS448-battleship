@@ -76,7 +76,7 @@ public class Board{
 		}
 	}
 
-	/*
+	/**
 	*	@pre:	 must been constructed
 	*	@post:	 pass by ref of char[][] map
 	*	@return: char[][]
