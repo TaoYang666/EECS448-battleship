@@ -25,18 +25,9 @@
 *	@Date_Created:					09-05-2020
 */
 public class Board{
-	/*
-		char[][] map is the 2D array
-		that will be used to hold the map
-	*/
-	char[][] map;
-	int xSize;
-	int ySize;
-
-	/*
-		char board_marker holds the filler character to
-		fill char[][] map
-	*/
+	private char[][] map;
+	private int xSize;
+	private int ySize;
 	char board_marker;
 
 	/**
@@ -45,29 +36,15 @@ public class Board{
 	*	@param: int, int, char
 	*/
 	public Board(int x, int y, char t_board_marker){
-		/*
-			initalize all values
-		*/
 		this.xSize = 0;
 		this.ySize = 0;
 		this.board_marker = '\0';
 
-		/*
-			set this object's dimensions to param
-		*/
 		this.xSize = x;
 		this.ySize = y;
 
-		/*
-			set this object's board_marker to param
-		*/
 		this.board_marker = t_board_marker;
 
-		/*
-			create the map
-			fill in with placeholder
-			char board_marker
-		*/
 		this.map = new char[this.ySize][this.xSize];
 		for(int i = 0; i < this.ySize; i++){
 			for(int k = 0; k < this.xSize; k++){
