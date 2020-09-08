@@ -1,3 +1,16 @@
+/**
+*  @Name:  Peter Tso
+*  @Email:  tsopeter@ku.edu
+*  @Brief:
+*            This handles the multiplexing the boards.
+*  @Note:
+*             This class requires the following files:
+*             --Board.java
+*             --BoardInterface.java
+*  @Date_Created:20200908
+*
+*/
+
 public class BoardHandler implements BoardInterface{
   private int xNum;
   private int yNum;
@@ -9,6 +22,12 @@ public class BoardHandler implements BoardInterface{
   private int yBoard;
   private Board ui;
 
+  /**
+  * @pre:   constructor
+  * @post:  implements the restrictions for the main board
+  * @param: must have board size, offset and index offset
+  * @return:None
+  */
   public BoardHandler(int t_xNum, int t_yNum, int t_xOffset, int t_yOffset, int t_indexOffset){
     this.xNum = t_xNum;
     this.yNum = t_yNum;
@@ -18,6 +37,11 @@ public class BoardHandler implements BoardInterface{
     this.indexOffset = t_indexOffset;
   }
 
+  /**
+  * @pre:     must have called constructor
+  * @post:    creates the board with the size of the internal boards
+  * @param:   x and y of the size of internal boards, and default marker
+  */
   public void create(int x, int y, char t_board_marker){
     this.xBoard = x;
     this.yBoard = y;
@@ -31,6 +55,11 @@ public class BoardHandler implements BoardInterface{
     ui = new Board(xdimensions, ydimensions, t_board_marker);
   }
 
+  /**
+  * @pre:     must have create called
+  * @post:    adds board to a certain x and y value on main board
+  * @param:   Board passed by reference and indexed or not
+  */
   public void addBoard(Board g, int x, int y, boolean indexed){
     if(g.getXSize() != this.xBoard || g.getYSize() != this.yBoard){
         String msg = "BoardHandler::addBoard() :Board size does not fit\n";
@@ -66,14 +95,29 @@ public class BoardHandler implements BoardInterface{
       }
   }
 
+
+  /**
+  * @pre: must have called create
+  * @post:  adds a character to a arbitrary location on board
+  */
   public void addElement(char marker, int x, int y){
     this.ui.addMarker(marker, x, y);
   }
 
+  /**
+  * @pre:  must have called create
+  * @post:  returns a character of an arbitrary location on board
+  * @return: char
+  */
   public char getElement(int x, int y){
     return this.ui.getMarker(x, y);
   }
 
+  /**
+  * @pre: must have called constructor
+  * @post:  returns the main board by value
+  * @return: board
+  */
   public Board getCopyBoard(){
     char marker = 183;
     Board copy = new Board(ui.getXSize(), ui.getYSize(), marker);
@@ -84,5 +128,5 @@ public class BoardHandler implements BoardInterface{
     }
     return copy;
   }
-  
+
 }
