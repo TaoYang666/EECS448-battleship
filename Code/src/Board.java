@@ -8,21 +8,20 @@
 *		and allows to add to board, get from board, and get the
 *		dimensions of the board.
 *
-*		It has two copy functions,
-*			public char[][] getBoard() returns char[][] map
-*			by referrence. Use this when you want to alter
-*			the board.
 *
-*			public char[][] getCopy() returns char[][] map
-*			by value. Use this when you want to view the board.
 *	@Note:
 *		There are no protections from OutOfBounds. Please
 *		implement protections on your own code when using
 *		Board.java.
 *
+*
+*		Use tsopeter/feature/BoardHandler to have the most
+*		up-to-date version of Board.java
+*
 *		Thank you.
 *
 *	@Date_Created:					09-05-2020
+*	@Date_Modified:					09-05-2020
 */
 public class Board{
 	private char[][] map;
@@ -55,7 +54,7 @@ public class Board{
 
 	/**
 	*	@pre:	 must been constructed
-	*	@post:	 pass by ref of char[][] map
+	*	@post:	 pass this.map Object
 	*	@return: char[][]
 	*/
 	public char[][] getBoard(){
@@ -64,7 +63,7 @@ public class Board{
 
 	/**
 	*	@pre:	 must been constructed
-	*	@post:	 pass by val of char[][] map
+	*	@post:	 pass a instance of char[][] Object
 	*	@return: char[][]
 	*/
 	public char[][] getCopyMap(){
@@ -78,7 +77,7 @@ public class Board{
 	}
 	/**
 	*	@pre:	must be constructed
-	*	@post: pass by val of Board copy
+	*	@post: pass copy Board Object that has the same value
 	*	@return: Board
 	*/
 	public Board getCopyBoard(){
