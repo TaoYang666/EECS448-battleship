@@ -24,6 +24,7 @@
 *		Thank you.
 *
 *	@Date_Created:					09-05-2020
+*	@Date_Modified:					09-08-2020
 */
 public class CollisionHandler {
 
@@ -32,7 +33,7 @@ public class CollisionHandler {
 	*	@post:	 checks to see if given place is same to marker
 	*	@return: boolean
 	*	@note:
-	*		When using check(), please pass by value of Board
+	*		When using check() please use getCopyBoard()
 	*/
 	public static boolean check(Board g, char marker, int x, int y){
 		if(x < 0 || y < 0 || x >= g.getXSize() || y >= g.getYSize()){
