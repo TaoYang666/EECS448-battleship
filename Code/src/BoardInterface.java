@@ -4,10 +4,9 @@
 *		@Brief:
 *							Interface file to forcing functionality of
 *							derived classes
-*	 @Date_Created:20200908
+*	 @Date_Created: 09-08-2020
 */
 public interface BoardInterface {
-
 
 	/**
 	* @pre:     must have called constructor
@@ -31,7 +30,7 @@ public interface BoardInterface {
 
 	/**
 	* @pre: must have made board
-	* @post:  returns the main board by value
+	* @post:  returns a Board Object
 	* @return: board
 	*/
 	Board getCopyBoard();

@@ -7,7 +7,7 @@
 *             This class requires the following files:
 *             --Board.java
 *             --BoardInterface.java
-*  @Date_Created:20200908
+*  @Date_Created: 09-08-2020
 *
 */
 
@@ -58,7 +58,8 @@ public class BoardHandler implements BoardInterface{
   /**
   * @pre:     must have create called
   * @post:    adds board to a certain x and y value on main board
-  * @param:   Board passed by reference and indexed or not
+  * @param:   Pass in Board Object (do not use getCopyBoard()) and index boolean
+  *           (true is index, false is no index)
   */
   public void addBoard(Board g, int x, int y, boolean indexed){
     if(g.getXSize() != this.xBoard || g.getYSize() != this.yBoard){
@@ -115,7 +116,7 @@ public class BoardHandler implements BoardInterface{
 
   /**
   * @pre: must have called constructor
-  * @post:  returns the main board by value
+  * @post:  returns the main Board Object
   * @return: board
   */
   public Board getCopyBoard(){
